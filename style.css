@@ -1,0 +1,142 @@
+/* global  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* container  */
+    .container{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(12,1fr);
+        
+    }
+    /* container ends  */
+        /* container children below starts  */
+        /* section one starts  */
+        .section-one{
+            grid-row: 5/8;
+            grid-column:2/6;
+            background: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        /* section one ends  */
+            /* section one children starts  */
+
+            /* section one children ends  */
+
+        /* section two starts  */
+        .section-two{
+            grid-row:5/8;
+            grid-column:8/12;
+            background: red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        /* section two ends  */
+            /* section two children starts  */
+                /* section> search container starts */
+                .search-container{
+                    /* background: green; */
+                    display: grid;
+                    grid-template-columns: 1rem 1fr 2px 1fr 1rem 1rem;
+                    grid-template-rows: 1fr;
+                    z-index: 10;
+                }
+                /* section search container ends  */
+                    /* section> search container children starts  */
+                        .search-container>.first{
+                            grid-column: 2/3 ;
+                            grid-row: 1/-1;
+                            z-index: 11;
+                            height: 2rem;
+                            border: none;
+                        }
+                        .search-container>.second{
+                            grid-column: 4/5;
+                            grid-row: 1/-1;
+                            z-index: 11;
+                            height: 2rem;
+                            border: none;
+                            
+
+                        }
+                        .search-container>button{
+                            grid-column: 5/6;
+                            grid-row: 1/-1;
+                        }
+                        .search-container>#firsticon{
+                            grid-column: 2/3;
+                            grid-row: 1/-1;
+                            z-index: 12;
+                            align-self: center;
+                            font-size: 0.8rem;
+                            padding-left: 0.5rem;
+                        }
+                        .search-container>#secondicon{
+                            grid-column: 4/5;
+                            grid-row: 1/-1;
+                            z-index: 12;
+                            align-self: center;
+                            font-size: 0.8rem;
+                            padding-left: 0.5rem;
+
+                        }
+                        .search-container>.border{
+                            background: white;
+                            grid-column: 3/4;
+                            grid-row: 1/-1;
+                            display: flex;
+                            align-items: center;
+                        
+                        }
+                        .search-container>.border>.real-border{
+                            height: 1.5rem;
+                            align-self: center;
+                            background: grey;
+                            width: 2px;
+                        }
+                    /* section search container children ends  */
+            /* section two children ends  */
+
+        /* container children above ends  */
+
+
+/* media querries starts below  */
+@media only screen and (max-width: 1494px) {
+    .section-one{
+        grid-column: 3/7;
+    }
+    .section-two{
+        grid-column:7/11;
+    }
+
+
+}
+    @media only screen and (max-width: 1370px) {
+        .section-one{
+            grid-column: 2/12;
+            grid-row: 4/6;
+        }
+        .section-two{
+            grid-column:2/12;
+            grid-row: 7/9;
+        }
+    }
+        @media only screen and (max-width: 1370px) {
+            .search-container{
+                grid-template-columns: 20px 1fr 2px 1fr 0.8rem 20px;
+            }
+
+        }   
+
+
+/* media querries ends above  */
